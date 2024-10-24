@@ -3,7 +3,7 @@
   hosts: cisco
   gather_facts: false
   vars:
-    acl: false
+    acl: true
   tasks:
     - name: Gather legacy and resource facts
       cisco.ios.ios_facts:
