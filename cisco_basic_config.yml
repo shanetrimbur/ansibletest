@@ -49,8 +49,6 @@
         parents: ip access-list extended MANAGEMENT_NET
         lines:
           - 10 permit ip 192.168.1.0 0.0.0.255 any log
-        before: no ip access-list extended test
-        match: exact
 
 
     - name: apply to vty lines
