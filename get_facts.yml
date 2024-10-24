@@ -1,0 +1,10 @@
+---
+- name: Get Facts
+  hosts: cisco
+  gather_facts: false
+
+  tasks:
+    - name: Gather legacy and resource facts
+      cisco.ios.ios_facts:
+        gather_subset: all
+        gather_network_resources: all

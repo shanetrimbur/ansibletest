@@ -1,0 +1,16 @@
+---
+ansible-navigator:
+  ansible:
+    inventory:
+      entries:
+      - inventory
+  mode: stdout
+  execution-environment:
+    container-engine: podman
+    enabled: true
+    image: registry.redhat.io/ansible-automation-platform-23/ee-supported-rhel8:latest
+  logging:
+    level: debug
+  playbook-artifact:
+    enable: true
+    save-as: playbook-artifacts/{playbook_name}-artifact-{time_stamp}.json

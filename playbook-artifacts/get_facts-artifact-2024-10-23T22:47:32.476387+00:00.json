@@ -1,0 +1,285 @@
+{
+    "plays": [
+        {
+            "__play_name": "Get Facts",
+            "name": "Get Facts",
+            "pattern": "cisco",
+            "play": "Get Facts",
+            "play_pattern": "cisco",
+            "play_uuid": "223abd17-53d0-b1d4-d6a1-000000000002",
+            "playbook": "/home/neo/cisco_automation/get_facts.yml",
+            "playbook_uuid": "4cf1a51a-088c-4bff-bff1-1b88bcc47671",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "6s",
+                    "__host": "ir1835",
+                    "__number": 0,
+                    "__result": "Failed",
+                    "__task": "Gather legacy and resource facts",
+                    "__task_action": "cisco.ios.ios_facts",
+                    "duration": 5.895625,
+                    "end": "2024-10-23T22:47:31.863285+00:00",
+                    "event_loop": null,
+                    "host": "ir1835",
+                    "ignore_errors": null,
+                    "play": "Get Facts",
+                    "play_pattern": "cisco",
+                    "play_uuid": "223abd17-53d0-b1d4-d6a1-000000000002",
+                    "playbook": "/home/neo/cisco_automation/get_facts.yml",
+                    "playbook_uuid": "4cf1a51a-088c-4bff-bff1-1b88bcc47671",
+                    "remote_addr": "ir1835",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "changed": false,
+                        "exception": "  File \"/usr/share/ansible/collections/ansible_collections/ansible/netcommon/plugins/module_utils/network/common/network.py\", line 233, in get_capabilities\n    capabilities = Connection(module._socket_path).get_capabilities()\n  File \"/usr/lib/python3.9/site-packages/ansible/module_utils/connection.py\", line 200, in __rpc__\n    raise ConnectionError(to_text(msg, errors='surrogate_then_replace'), code=code)\n",
+                        "invocation": {
+                            "module_args": {
+                                "available_network_resources": false,
+                                "gather_network_resources": [
+                                    "all"
+                                ],
+                                "gather_subset": [
+                                    "all"
+                                ]
+                            }
+                        },
+                        "msg": "ssh connection failed: Failed to authenticate public key: Access denied for 'password'. Authentication that can continue: publickey,password"
+                    },
+                    "resolved_action": "cisco.ios.ios",
+                    "start": "2024-10-23T22:47:25.967660+00:00",
+                    "task": "Gather legacy and resource facts",
+                    "task_action": "cisco.ios.ios_facts",
+                    "task_args": "",
+                    "task_path": "/home/neo/cisco_automation/get_facts.yml:7",
+                    "task_uuid": "223abd17-53d0-b1d4-d6a1-000000000004",
+                    "uuid": "b54f60d5-cc5b-4957-8bc0-2c962e4992d0"
+                }
+            ],
+            "uuid": "223abd17-53d0-b1d4-d6a1-000000000002"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "cmdline": "-vvvv",
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/neo/cisco_automation/inventory"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/neo/cisco_automation/get_facts.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/neo/cisco_automation"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/neo/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "registry.redhat.io/ansible-automation-platform-23/ee-supported-rhel8:latest",
+                "pull": {
+                    "policy": "tag"
+                }
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/neo/cisco_automation/ansible-navigator.log",
+                "level": "debug"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "playbook-artifacts/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Command line",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Settings file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Settings file",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Settings file",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Defaults",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Settings file",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Settings file",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Settings file",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/neo/cisco_automation/ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "failed",
+    "status_color": 9,
+    "stdout": [
+        "\u001b[0;34mansible-playbook [core 2.14.13]\u001b[0m",
+        "\u001b[0;34m  config file = /home/neo/cisco_automation/ansible.cfg\u001b[0m",
+        "\u001b[0;34m  configured module search path = ['/home/runner/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\u001b[0m",
+        "\u001b[0;34m  ansible python module location = /usr/lib/python3.9/site-packages/ansible\u001b[0m",
+        "\u001b[0;34m  ansible collection location = /home/runner/.ansible/collections:/usr/share/ansible/collections\u001b[0m",
+        "\u001b[0;34m  executable location = /usr/bin/ansible-playbook\u001b[0m",
+        "\u001b[0;34m  python version = 3.9.18 (main, Sep 22 2023, 17:58:34) [GCC 8.5.0 20210514 (Red Hat 8.5.0-20)] (/usr/bin/python3.9)\u001b[0m",
+        "\u001b[0;34m  jinja version = 3.1.2\u001b[0m",
+        "\u001b[0;34m  libyaml = True\u001b[0m",
+        "\u001b[0;34mUsing /home/neo/cisco_automation/ansible.cfg as config file\u001b[0m",
+        "\u001b[0;34msetting up inventory plugins\u001b[0m",
+        "\u001b[0;34mhost_list declined parsing /home/neo/cisco_automation/inventory as it did not pass its verify_file() method\u001b[0m",
+        "\u001b[0;34mscript declined parsing /home/neo/cisco_automation/inventory as it did not pass its verify_file() method\u001b[0m",
+        "\u001b[0;34mauto declined parsing /home/neo/cisco_automation/inventory as it did not pass its verify_file() method\u001b[0m",
+        "\u001b[0;34mParsed /home/neo/cisco_automation/inventory inventory source with ini plugin\u001b[0m",
+        "\u001b[0;34mLoading collection cisco.ios from /usr/share/ansible/collections/ansible_collections/cisco/ios\u001b[0m",
+        "\u001b[0;34mredirecting (type: action) cisco.ios.ios_facts to cisco.ios.ios\u001b[0m",
+        "\u001b[0;34mLoading callback plugin default of type stdout, v2.0 from /usr/lib/python3.9/site-packages/ansible/plugins/callback/default.py\u001b[0m",
+        "\u001b[0;34mLoading callback plugin awx_display of type stdout, v2.0 from /runner/artifacts/1e2f053b-174e-4b64-8337-0c87fe7ecd65/callback/awx_display.py\u001b[0m",
+        "\u001b[0;34mSkipping callback 'awx_display', as we already have a stdout callback.\u001b[0m",
+        "\u001b[0;34mSkipping callback 'default', as we already have a stdout callback.\u001b[0m",
+        "\u001b[0;34mSkipping callback 'minimal', as we already have a stdout callback.\u001b[0m",
+        "\u001b[0;34mSkipping callback 'oneline', as we already have a stdout callback.\u001b[0m",
+        "",
+        "PLAYBOOK: get_facts.yml ********************************************************",
+        "\u001b[0;34mPositional arguments: /home/neo/cisco_automation/get_facts.yml\u001b[0m",
+        "\u001b[0;34mverbosity: 4\u001b[0m",
+        "\u001b[0;34mconnection: smart\u001b[0m",
+        "\u001b[0;34mtimeout: 10\u001b[0m",
+        "\u001b[0;34mbecome_method: sudo\u001b[0m",
+        "\u001b[0;34mtags: ('all',)\u001b[0m",
+        "\u001b[0;34minventory: ('/home/neo/cisco_automation/inventory',)\u001b[0m",
+        "\u001b[0;34mforks: 5\u001b[0m",
+        "\u001b[0;34m1 plays in /home/neo/cisco_automation/get_facts.yml\u001b[0m",
+        "",
+        "PLAY [Get Facts] ***************************************************************",
+        "\u001b[0;34mredirecting (type: action) cisco.ios.ios_facts to cisco.ios.ios\u001b[0m",
+        "\u001b[0;34mLoading collection ansible.netcommon from /usr/share/ansible/collections/ansible_collections/ansible/netcommon\u001b[0m",
+        "",
+        "TASK [Gather legacy and resource facts] ****************************************",
+        "\u001b[1;30mtask path: /home/neo/cisco_automation/get_facts.yml:7\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> attempting to start connection\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> using connection plugin ansible.netcommon.network_cli\u001b[0m",
+        "\u001b[0;34mFound ansible-connection at path /usr/bin/ansible-connection\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> local domain socket does not exist, starting it\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> control socket path is /home/runner/.ansible/pc/070ee498bd\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> Loading collection ansible.netcommon from /usr/share/ansible/collections/ansible_collections/ansible/netcommon\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> Loading collection cisco.ios from /usr/share/ansible/collections/ansible_collections/cisco/ios\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> local domain socket listeners started successfully\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> loaded cliconf plugin ansible_collections.cisco.ios.plugins.cliconf.ios from path /usr/share/ansible/collections/ansible_collections/cisco/ios/plugins/cliconf/ios.py for network_os cisco.ios.ios\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> ssh type is set to auto\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> autodetecting ssh_type\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> ssh type is now set to libssh\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> \u001b[0m",
+        "\u001b[0;34m<192.168.1.90> local domain socket path is /home/runner/.ansible/pc/070ee498bd\u001b[0m",
+        "\u001b[0;34mredirecting (type: action) cisco.ios.ios_facts to cisco.ios.ios\u001b[0m",
+        "\u001b[0;34mredirecting (type: action) cisco.ios.ios_facts to cisco.ios.ios\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> ANSIBLE_NETWORK_IMPORT_MODULES: enabled\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_facts  at /usr/share/ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_facts.py\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_facts\u001b[0m",
+        "\u001b[0;34m<192.168.1.90> ANSIBLE_NETWORK_IMPORT_MODULES: complete\u001b[0m",
+        "\u001b[0;31mThe full traceback is:\u001b[0m",
+        "\u001b[0;31m  File \"/usr/share/ansible/collections/ansible_collections/ansible/netcommon/plugins/module_utils/network/common/network.py\", line 233, in get_capabilities\u001b[0m",
+        "\u001b[0;31m    capabilities = Connection(module._socket_path).get_capabilities()\u001b[0m",
+        "\u001b[0;31m  File \"/usr/lib/python3.9/site-packages/ansible/module_utils/connection.py\", line 200, in __rpc__\u001b[0m",
+        "\u001b[0;31m    raise ConnectionError(to_text(msg, errors='surrogate_then_replace'), code=code)\u001b[0m",
+        "\u001b[0;31mfatal: [ir1835]: FAILED! => {\u001b[0m",
+        "\u001b[0;31m    \"changed\": false,\u001b[0m",
+        "\u001b[0;31m    \"invocation\": {\u001b[0m",
+        "\u001b[0;31m        \"module_args\": {\u001b[0m",
+        "\u001b[0;31m            \"available_network_resources\": false,\u001b[0m",
+        "\u001b[0;31m            \"gather_network_resources\": [\u001b[0m",
+        "\u001b[0;31m                \"all\"\u001b[0m",
+        "\u001b[0;31m            ],\u001b[0m",
+        "\u001b[0;31m            \"gather_subset\": [\u001b[0m",
+        "\u001b[0;31m                \"all\"\u001b[0m",
+        "\u001b[0;31m            ]\u001b[0m",
+        "\u001b[0;31m        }\u001b[0m",
+        "\u001b[0;31m    },\u001b[0m",
+        "\u001b[0;31m    \"msg\": \"ssh connection failed: Failed to authenticate public key: Access denied for 'password'. Authentication that can continue: publickey,password\"\u001b[0m",
+        "\u001b[0;31m}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;31mir1835\u001b[0m                     : ok=0    changed=0    unreachable=0    \u001b[0;31mfailed=1   \u001b[0m skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

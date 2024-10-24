@@ -1,0 +1,58 @@
+---
+- name: Get Facts
+  hosts: cisco
+  gather_facts: false
+  vars:
+    acl: false
+  tasks:
+    - name: Gather legacy and resource facts
+      cisco.ios.ios_facts:
+        gather_subset: all
+        gather_network_resources: all
+
+    - name: Debug facts
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts }}"
+
+    - name: Debug facts
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts }}"
+
+    - name: Configure http timeout policy
+      cisco.ios.ios_config:
+        lines:
+          - ip http timeout-policy idle 300 life 3000 requests 30
+          - ip ssh server algorithm mac hmac-sha2-256
+          - no ip ssh server algorithm mac hmac-sha1
+          - login block-for 900 attempts 10 within 120
+          - login on-failure log
+          - login on-success log
+
+    - name: Configure line con 0
+      cisco.ios.ios_config:
+        lines:
+          - privilege level 15
+          - exec-timeout 5 0
+          - logging synchronous
+        parents: line con 0
+
+    - name: Configure SNMP
+      cisco.ios.ios_config:
+        lines:
+          - no snmp-server host 137.232.96.48 version 2c public
+          - snmp-server host 137.232.96.48 version 2c 3maw
+
+
+    - name: Load new acl into device
+      when: acl == true
+      cisco.ios.ios_config:
+        lines:
+          - 10 permit ip host 192.0.2.1 any log
+          - 20 permit ip host 192.0.2.2 any log
+          - 30 permit ip host 192.0.2.3 any log
+          - 40 permit ip host 192.0.2.4 any log
+          - 50 permit ip host 192.0.2.5 any log
+        parents: ip access-list standard MANAGEMENT_NET
+        before: no ip access-list extended test
+        match: exact
+

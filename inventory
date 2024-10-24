@@ -1,0 +1,2 @@
+[cisco]
+ir1835	ansible_host=192.168.1.90
